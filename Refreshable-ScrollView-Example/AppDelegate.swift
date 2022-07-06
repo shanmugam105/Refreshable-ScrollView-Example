@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIHostingController(rootView: UserListContentView(contentView: content, onRefresh: { print("Updating...") }))
+        window?.rootViewController = UIHostingController(rootView: RefreshableScrollViewView(contentView: content, onRefresh: { print("Updating...") }))
         window?.makeKeyAndVisible()
         return true
     }
